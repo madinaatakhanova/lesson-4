@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+body{
+  background-color: #1F1D2B;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: start;
+  gap: 20px;
+  border-radius: 16px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.saidbar{
+  padding: 6px;
+  width: 100px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #252836;
+}
+.saidbtn{
+  padding: 16px;
+  background-color: transparent;
+  border: none;
+  width: 100px;
+  height: 110px;
+}
+.saidbtn:nth-child(1){
+  background-color: #eb966a;
+  padding: 8px;
+  border-radius: 12px;
+  opacity: 0,26;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.saidbtn:hover{
+>svg{
+  >path{
+    fill:#fff;
   }
-  to {
-    transform: rotate(360deg);
+}
+  border-radius: 8px;
+  background-color: #ea7c69;
+  box-shadow: 0px 8px 24px 0px rgba(234, 124, 105, 0.32);
+}
+
+.panel{
+  width: 904px;
+  padding: 10px 20px;
+  >.navbar{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    >.navbarText{
+      color: #fff;
+    }
+    >input{
+      width: 35%;
+      padding:8px 20px;
+      border-radius: 8px;
+      border: 1px solid var(--Base-Dark-Line, #393C49);
+      background: var(--Base-Form-BG, #2D303E);
+      outline: none;
+      color: #fff;
+      font-size: 18px;
+    }
+  }
+
+  >.links{
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 32px;
+    >a{
+      font-size: 18px;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
+  >.main{
+    margin-top: 34px;
+    .sort{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      >h2{
+        color: #fff;
+        font-size: 25px;
+      }
+      >select{
+        padding: 15px 20px;
+        color: #fff;
+        border-radius: 8px;
+        border: 1px solid #393C49;
+        background: #1F1D2B;
+        outline: none;
+      }
+    }
+
+    >.foods{
+      >.cards{
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        flex-wrap: wrap;
+        gap: 100px;
+        margin-top: 100px;
+        >.card{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding: 10px;
+          border-radius: 15px;
+          color: #fff;
+          text-align: center;
+          border:1px solid #fff;
+            width: 200px;
+            height: 240px;
+            background-color: #252836;
+            position: relative;
+            >img{
+              transition: all 0.5s ease-in-out;
+                position: absolute;
+                top: -30%;
+                border-radius: 50%;
+                width: 150px;
+            }
+            >h4{
+              width: 150px;
+              margin: 0;
+              margin-top: 80px;
+            }
+            >strong{
+              margin-top: 10px;
+            }
+            >p{
+              margin-top: 10px;
+            }
+            transition: all 0.5s ease-in-out;
+            &:hover{
+              height: 260px;
+              box-shadow: -10px 10px 10px  rgb(79, 3, 3);
+            }
+            &:hover img{
+              
+                top: -45px;
+              
+            }
+
+        }
+      }
+    }
   }
 }
